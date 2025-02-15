@@ -37,18 +37,18 @@ const ThemeToggle: FunctionalComponent = () => {
     if (typeof localStorage !== undefined && localStorage.getItem('theme')) {
       return localStorage.getItem('theme')
     }
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark'
+    if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+      return 'light'
     }
-    return 'light'
+    return 'dark'
   })
 
   useEffect(() => {
     const root = document.documentElement
-    if (theme === 'light') {
-      root.classList.remove('theme-dark')
+    if (theme === 'dark') {
+      root.classList.remove('theme-light')
     } else {
-      root.classList.add('theme-dark')
+      root.classList.add('theme-light')
     }
   }, [theme])
 
