@@ -1,4 +1,4 @@
 [[redirects]]
 from = "/*"
-to = "/index.astro"
+to = "/src/pages/index.astro"
 status = 200
